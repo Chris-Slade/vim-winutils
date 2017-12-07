@@ -12,6 +12,14 @@ if !exists('g:winutils_no_lsw')
     command! Lsw :call winutils#ListWindows()
 endif
 
+if !exists('g:winutils_no_findwin')
+    command! -nargs=1 -complete=buffer FindWin :call winutils#ShowWinInfo(<f-args>)
+endif
+
+if !exists('g:winutils_no_gotowin')
+    command! -nargs=1 -complete=buffer GotoWin :call winutils#GotoWin(<f-args>)
+endif
+
 " Restore options
 let &cpo = s:savecpo
 unlet s:savecpo

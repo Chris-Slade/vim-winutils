@@ -11,15 +11,27 @@ OVERVIEW                                        *winutils-overview*
 This plug-in provides utilities for working with windows, tabs, and buffers.
 
                                                 *:Lsw*
-:Lsw    List all windows across all tab pages. The format resembles that of
-|:ls|; see the documentation there for the format of the `state` field. Here
-is an example of its output as I write this documentation: >
+:Lsw        List all windows across all tab pages. The format resembles that of
+|:ls|; see the documentation there for the format of the `state` field. Here is an
+example of its output in a session editing this plug-in's files: >
 
     tabnr winnr winid bufnr state
         1     1  1008     4    a+ "doc/winutils.txt" line 0
         1     2  1002     2     a "autoload/winutils.vim" line 1
         1     3  1000     1     a "plugin/winutils.vim" line 12
         2     1  1005     3     a "~/.vimrc" line 0
+<
+                                                *:FindWin*
+:FindWin    Find all windows containing the given buffer and list their tabs,
+window numbers, and window IDs. The buffer is specified by name. Completion on
+buffer names is provided. Fails if the buffer name is ambiguous or can't be
+found.
+
+:GotoWin    Attempt to go to a window containing the given buffer. If the
+buffer does not exist, displays an error. If there is a single window
+containing the buffer, goes to it. If there are multiple windows containing
+the buffer, you are prompted to select which one. Completion on buffer names
+is provided.
 
 SETTINGS                                        *winutils-settings*
                                                 *winutils-config*
@@ -27,10 +39,10 @@ SETTINGS                                        *winutils-settings*
                                                 *g:winutils_no_lsw*
 g:winutils_no_lsw   When set, the :Lsw command will not be defined.
 
-TO-DO                                           *winutils-todo*
+                                                *g:winutils_no_findwin*
+g:winutils_no_findwin    When set, the :FindWin command will not be defined.
 
-* Implement command for finding and listing all windows containing a given
-buffer.
-* Implement command for switching to a window containing a given buffer.
+                                                *g:winutils_no_gotowin*
+g:winutils_no_gotowin    When set, the :GotoWin command will not be defined.
 
  vim:tw=78:et:ft=help:norl:
