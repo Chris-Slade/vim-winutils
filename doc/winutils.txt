@@ -32,6 +32,7 @@ window numbers, and window IDs. The buffer is specified by name. Completion on
 buffer names is provided. Fails if the buffer name is ambiguous or can't be
 found.
 
+                                                *:GotoWin*
 :GotoWin    Attempt to go to a window containing the given buffer. If the
 buffer does not exist, displays an error. If there is a single window
 containing the buffer, goes to it. If there are multiple windows containing
