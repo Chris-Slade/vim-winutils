@@ -37,7 +37,7 @@ SETTINGS                                        *winutils-settings*
                                                 *winutils-config*
 
                                                 *g:winutils_no_lsw*
-g:winutils_no_lsw   When set, the :Lsw command will not be defined.
+g:winutils_no_lsw        When set, the :Lsw command will not be defined.
 
                                                 *g:winutils_no_findwin*
 g:winutils_no_findwin    When set, the :FindWin command will not be defined.
