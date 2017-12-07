@@ -4,7 +4,12 @@ OS).
 Author: Chris-Slade <https://github.com/Chris-Slade>
 License: MIT
 
-This plug-in is only available if 'compatible' is not set.
+REQUIREMENTS                                    *winutils-requirements*
+
+This plug-in is only available if 'compatible' is not set. It also relies on
+Vim 8 features, specifically |windowid|s and their associated functions. If
+`exists('*win_findbuf')` is true for you, your version of Vim is probably
+compatible.
 
 OVERVIEW                                        *winutils-overview*
 
