@@ -5,7 +5,7 @@
 
 if exists('g:loaded_winutils') || &cp | finish | endif
 let g:loaded_winutils = 1
-let s:savecpo = $cpo
+let s:savecpo = &cpo
 set cpo&vim
 
 if !exists('g:winutils_no_lsw')
